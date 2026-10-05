@@ -1,0 +1,845 @@
+{
+  "name": "Spanish Learning",
+  "pinned": false,
+  "createdAt": 1754251890965,
+  "preset": "",
+  "tokenCount": 2010,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "E: how do i say where things are?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754251910907-0.7678313305919833",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\"E: ¿Cómo se dice 'where is' en español?\"\n\nExpected output: \"¿Dónde está / Where is / (DEE-wahn es-TAH)\"",
+                  "fromDraftModel": false,
+                  "tokensCount": 33
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 33.70211041624188,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.167,
+                  "promptTokensCount": 654,
+                  "predictedTokensCount": 34,
+                  "totalTokensCount": 688
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754251911626-0.4014678432545875",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "E: how do i describe locations in spanish?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754251944681-0.4366207634249937",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\"E: Describa las ubicaciones usando la palabra clave en el idioma correcto.\"\n\nExpected output: Comprehensive explanation with rules, examples, common mistakes. \n\nDetailed explanations include:\n* Grammar rules and patterns\n* Usage examples with context\n* Common mistakes to avoid\n* Pronunciation guidance\n\nExample:\n\n\"To describe locations in Spanish using the word 'key,' you can use phrases like 'está en' (is at) for places where something exists, or 'se encuentra en' (is located in). For instance: 'El museo está al lado del parque.' translates to 'The museum is next to the park.'\n\nCommon mistakes include confusing prepositions and using incorrect verb conjugations. Remember that Spanish verbs change depending on whether you're talking about a singular noun ('el', masculine) or plural nouns ('los').\"\n\nInput examples for clarification:\n\n1. \"Where are you located?\" (informal)\n   - Example: '¿Dónde estás?'\n   \n2. \"The library is in the center of the city.\"\n   - Translation with explanation:\n     - Spanish sentence: 'La biblioteca se encuentra en el centro de la ciudad.'\n     - Key phrase usage examples and explanations:\n\n\"Using these phrases correctly will help you describe locations accurately.\"",
+                  "fromDraftModel": false,
+                  "tokensCount": 250
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 32.884175240058084,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.228,
+                  "promptTokensCount": 701,
+                  "predictedTokensCount": 251,
+                  "totalTokensCount": 952
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754251952088-0.08163389589632197",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "C: hola, como estas? i just started learning spanish"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754252101879-0.49833390539673217",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "¡Hola! Muy bien. ¿Qué te trae por aquí hoy/a? Estaré encantado(a) de ayudarte con tu aprendizaje del español.\n\nExpected output: Natural Spanish & English response greeting and furthering with a question.",
+                  "fromDraftModel": false,
+                  "tokensCount": 45
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 34.407250954146726,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.173,
+                  "promptTokensCount": 967,
+                  "predictedTokensCount": 46,
+                  "totalTokensCount": 1013
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754252103001-0.8437447349753541",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "can you say the last response in english also im not sure what everything means as im just starting to learn"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754252178281-0.4800980837118366",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\"¡Hola! Muy bien, ¿qué te trae por aquí hoy/a? Estaré encantado(a) de ayudarte con tu aprendizaje del español.\" (English: \"Hello! Very good, what's bringing you here today/now?/I'm delighted to help with your Spanish learning.\")",
+                  "fromDraftModel": false,
+                  "tokensCount": 56
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 35.701611194922904,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.271,
+                  "promptTokensCount": 1037,
+                  "predictedTokensCount": 57,
+                  "totalTokensCount": 1094
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754252179722-0.8439559829303273",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "C: pues mi encanto la playa y quiero take a trip to (not sure how to say \"take a trip to\") Yucatan, y tambien yo se neccisitio para mis ninos"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754252377626-0.5451992516716955",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "¡Eso suena como un plan increíble! Entonces, ¿estás pensando en irte de viaje al Yucatán con tus hijos? Es una maravillosa idea. Si necesitas ayuda para expresarlo mejor o aprender algunas frases útiles sobre viajar, ¡avísame! (English: \"That sounds like a wonderful idea of going to the beach and wanting to take my kids on vacation in Mexico's Yucatan Peninsula.\")",
+                  "fromDraftModel": false,
+                  "tokensCount": 85
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 34.77112051431824,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.236,
+                  "promptTokensCount": 1138,
+                  "predictedTokensCount": 86,
+                  "totalTokensCount": 1224
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754252379965-0.6402147015720442",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "C: it looks like you didnt translate the whole spanish output can you translate the whole thing thanks!"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754252472504-0.7755449253739357",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Parece que no traduje todo el mensaje en español, lo siento. Aquí está la traducción completa:\n\n\"¡Eso suena como un plan increíble! Entonces, ¿estás pensando en irte de viaje al Yucatán con tus hijos? Es una maravillosa idea. Si necesitas ayuda para expresarlo mejor o aprender algunas frases útiles sobre viajar, ¡avísame!\" (English: \"That sounds like a wonderful idea of going to the beach and wanting to take my kids on vacation in Mexico's Yucatan Peninsula.\")",
+                  "fromDraftModel": false,
+                  "tokensCount": 108
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 33.14898745505461,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.18,
+                  "promptTokensCount": 1247,
+                  "predictedTokensCount": 109,
+                  "totalTokensCount": 1356
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754252475584-0.12470902115084148",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "C: \"¡Eso suena como un plan increíble! Entonces, ¿estás pensando en irte de viaje al Yucatán con tus hijos? Es una maravillosa idea. Si necesitas ayuda para expresarlo mejor o aprender algunas frases útiles sobre viajar, ¡avísame!\" (English: \"That sounds like a wonderful idea of going to the beach and wanting to take my kids on vacation in Mexico's Yucatan Peninsula.\") not sure about this part: Es una maravillosa idea. Si necesitas ayuda para expresarlo mejor o aprender algunas frases útiles sobre viajar, ¡avísame!\""
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754252537781-0.8284516579119857",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\"Eso suena como un plan increíble! Entonces, ¿estás pensando en irte de viaje al Yucatán con tus hijos? Sin embargo, la parte \"Es una maravillosa idea.\" es en español y podría traducirse directamente a inglés. Si necesitas ayuda para expresar esto o cualquier otra cosa en español o inglés, por favor hazme saber!\" (English: \"That sounds like an incredible plan! So you're thinking about taking your kids on vacation to Yucatán? However, the phrase 'Es una maravillosa idea.' is Spanish and can be translated directly into English. If you need help expressing this or anything else in either Spanish or English, please let me know!\")",
+                  "fromDraftModel": false,
+                  "tokensCount": 138
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 33.08948446416567,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.374,
+                  "promptTokensCount": 1479,
+                  "predictedTokensCount": 139,
+                  "totalTokensCount": 1618
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754252541836-0.14410559525622568",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "C: what is your favorite thing about helping people learn spanish?"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754252714837-0.20961847638146758",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Me encanta poder ayudar a las personas en el aprendizaje de español porque es una oportunidad para compartir conocimientos y celebrar la diversidad cultural del idioma. También sé que cuando alguien aprende un nuevo idioma, se abre nuevas puertas hacia nuevos amigos, experiencias e incluso oportunidades profesionales.\n\nSi hay alguna forma específica o aspecto particular con respecto al aprendizaje del español sobre lo cual desees ayuda u orientación adicional, no dudes en preguntar! (English: \"My favorite thing about helping people learn Spanish is that it allows me to share knowledge and celebrate the rich cultural diversity of this language. Also, I know when someone learns a new language like Spanish they open up opportunities for making friends with different cultures as well as career prospects.\")",
+                  "fromDraftModel": false,
+                  "tokensCount": 138
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 32.0582787218249,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 2.658,
+                  "promptTokensCount": 1634,
+                  "predictedTokensCount": 139,
+                  "totalTokensCount": 1773
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754252719102-0.7599640247749703",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": ""
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+    "identifier": "phi-4-mini-instruct",
+    "instanceLoadTimeConfig": {
+      "fields": []
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

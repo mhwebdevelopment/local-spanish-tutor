@@ -1,0 +1,1148 @@
+{
+  "name": "Language Translation Exchange",
+  "pinned": false,
+  "createdAt": 1754123637683,
+  "preset": "",
+  "tokenCount": 1990,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: translation pig"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754123647380-0.9365360936548657",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Original / Translation: \"te quiero mucho\" → You: te quiero / I love you (informal)",
+                  "fromDraftModel": false,
+                  "tokensCount": 22
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 88.99361760990229,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.213,
+                  "promptTokensCount": 330,
+                  "predictedTokensCount": 23,
+                  "totalTokensCount": 353
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754123647562-0.5464207597471575",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: translation pig"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754123670130-0.2416849510660689",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "original / translation: te quiero / I love you (informal)",
+                  "fromDraftModel": false,
+                  "tokensCount": 14
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 51.506425598281474,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.189,
+                  "promptTokensCount": 360,
+                  "predictedTokensCount": 15,
+                  "totalTokensCount": 375
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754123670238-0.7805464444523229",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "pig in english"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754123676359-0.8821967904271416",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "You must provide the exact format as instructed. Only input a Spanish or English word/phrase, and output its direct one-to-one equivalent without additional context.\n\n- Example of correct execution - Do not use extra explanations unless specifically requested:\n\nInput: \"amigo\" → Output: amigo / friend\n\nWhat is your name in Spanish? I want the translation only.",
+                  "fromDraftModel": false,
+                  "tokensCount": 72
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 94.15786559338738,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.242,
+                  "promptTokensCount": 381,
+                  "predictedTokensCount": 73,
+                  "totalTokensCount": 454
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754123677091-0.671834658117081",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "no u, thats your system prompt.... / reasoning behind the system prompt... you provide the translation "
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754123783315-0.6366894376615344",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "te quiero / I love you (informal)",
+                  "fromDraftModel": false,
+                  "tokensCount": 10
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 43.470975615153826,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.195,
+                  "promptTokensCount": 477,
+                  "predictedTokensCount": 11,
+                  "totalTokensCount": 488
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754123783371-0.8582086652306083",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "pig in spanihs"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754123795523-0.9427644663926806",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "original / translation: pig / cerdo\n\nOriginal / Translation:\n\n- Original: Pig\n- Translation: Cerdo or Pavo (depending on context as both can be used for English \"pig\" and Spanish \"cerdo\")\n\nNote that the term could have a different meaning based on cultural understanding. In some contexts, it might not translate directly to an animal but rather describe something else entirely.\n\noriginal / translation:\n\n- Original: Pig\n- Translation: Cerdo (for actual pig) or Pavo (if referring specifically to Thanksgiving context as in \"turkey\") \n\nRemember this is a direct and simple one-to-one format following the instructions provided. If you have any further translations, feel free to ask!",
+                  "fromDraftModel": false,
+                  "tokensCount": 143
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 88.69098207955594,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.205,
+                  "promptTokensCount": 496,
+                  "predictedTokensCount": 144,
+                  "totalTokensCount": 640
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754123797002-0.1925872284840392",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: translation pig"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754123811296-0.30721898406724146",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "original / translation: Pig / Cerdo\n\nOriginal / Translation:\n\n- Original: Pig\n- Spanish equivalent (if directly translating English term \"pig\"): Pavo or Cerdo (depending on context; if referring specifically for a Thanksgiving turkey)\n\nCultural note:\nIn the U.S., when someone says they are going to have pig, it usually refers to enjoying barbecued pork. In Spain, 'cerdo' is more general and can also mean any kind of non-vegetarian meat that comes from an adult animal.\n\nIf you need another translation or further explanation in TUTOR, CONVERSATION, or TRANSLATION mode please let me know the specific request as directed earlier!",
+                  "fromDraftModel": false,
+                  "tokensCount": 138
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 86.71748311177016,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.199,
+                  "promptTokensCount": 647,
+                  "predictedTokensCount": 139,
+                  "totalTokensCount": 786
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754123812726-0.810339137350886",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: translation pig"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754124115584-0.3765811365386361",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "original / translation:\n\n- Original: Pig\n- Spanish equivalent (if translating directly to a context where it means an animal): Cerdo\n\nCultural note:\nIn this instance 'cerdo' is used in its most common meaning, which would be the actual word for \"pig\" as understood within both countries.\n\nIf you need another translation or have any specific terms related with different contexts (like food named after a pig) please let me know to provide an accurate and contextually relevant answer following previous instructions.",
+                  "fromDraftModel": false,
+                  "tokensCount": 102
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 96.50618562486959,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.378,
+                  "promptTokensCount": 519,
+                  "predictedTokensCount": 103,
+                  "totalTokensCount": 622
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754124116610-0.9551428932668949",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: conversation No puedo decidirme por la playa o la ciudad para las vacaciones"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754124187437-0.8216554516216203",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No te preocupes, en el futuro puedes revisarlo con los planes de tu viaje y ver que te conviene más, si prefieres quedarte un tiempo menor es probable que la ciudad sea una buena opción; sin embargo, si estás buscando algo relajante, a distar al agua puede ser muy placentara.\n\nNo se trata solo del lugar, sino el tipo de actividades en los cuales puedes disfrutar. La playa te permite sumergirte en la naturaleza y relajarte con un pedacito de sol, mientras que una ciudad ofrece el acceso a la cultura, la gastronomía local e interactuar con personas diversas. Considera tu preferencia actual: ¿el calor del soleado o las riberas para distar? La decision es personal. Si te preocupa el clima, investiga si hay mejores épocas del año en cada lugar.\n\nNo se trata solo de un sitio; se trata de lo que resuena con tus intereses y los compromisos del viaje. No dudes en consultar a amigos, familiares o foros dedicados para ver opiniones y experiencias previas antes de tomar una decisión final. Se recomienda tener flexibilidad: si el tiempo te permite, la idea es disfrutar tanto de la playa como de las ciudades.\n\nRecuerda que no se trata solo del lugar, sino lo que resuena con tus intereses en tu viaje. Si prefieres, puedes considerar un destino turístico mixto o alternar entre dos destinos para maximizar tu disfrute durante el tiempo disponible.\n \n¿Te parece una orientación útil? No dudes en hacer más preguntas si tienes otras!",
+                  "fromDraftModel": false,
+                  "tokensCount": 319
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 91.91988056390318,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.219,
+                  "promptTokensCount": 641,
+                  "predictedTokensCount": 320,
+                  "totalTokensCount": 961
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754124190854-0.09256949525071378",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: conversation No puedo decidirme por la playa o la ciudad para las vacaciones"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754125025632-0.4330813949962554",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "No se trata solo de un lugar, es sobre lo que te encantaría experimentar. El factor decisivo puede ser el tiempo disponible y los planes específicos del viaje.\n\nSi vas a distar una semana en cada uno, podría ser tentador ir primero a ver el principal attráctorio local (pues no hay mucho espacio para recorrer). Por otro lado, si vives con un grupo de amigos o familiares, es preferible tener la flexibilidad para hacer algo divertido juntos. El factor decisivo también puede ser que prefieras una base en ciudad, lo cual te permitirá acceder a más opciones.\n\nConsidera el clima y ver qué tan adecuado es cada destino para ti: ¿el calor del sol, los rayos de sol o la brisa marina? Al final, se trata de un placer personal. No hay nada wrong con distar por una semana tanto en ciudad como playa; lo importante es que disfrutes tu tiempo.\n\nPor otra parte, el factor decisivo no solo es un lugar: si vas a aprovechar al máximo, considera también los tipos de actividades (en la playa o en las ciudades) y ver qué te interesa más. Piénsalo con calma y ten presente tus gustos actuales: ¿te encantaría sumergirte en la naturaleza o interactuar con nuevas personas?\n\nRecuerda que es una elección personal; no se trata solo del lugar, sino de lo que resuena contigo para el disfrute.\n\n¿Te parece bien? No dudes en hacer más preguntas",
+                  "fromDraftModel": false,
+                  "tokensCount": 301
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "userStopped",
+                  "tokensPerSecond": 88.95434462444771,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.408,
+                  "promptTokensCount": 979,
+                  "predictedTokensCount": 302,
+                  "totalTokensCount": 1281
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754125028973-0.23118079843653827",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: translation pig"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754125054030-0.22549836396945433",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "original / translation:\n\n- Original and Spanish equivalent for the term \"pig\": Pig → Cerdo\n\nCultural note:\n\"Cerdo\" is used as a general reference to an adult non-human swine animal in both languages. It’s commonly understood that “cerdo” translates directly into English's word, pig.\n\nIf you have any further translations or need explanations of other terms related with different contexts (like food named after a pig) please let me know so I can provide accurate and contextually relevant answer following the previous instructions!",
+                  "fromDraftModel": false,
+                  "tokensCount": 107
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 90.21697181722041,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.37,
+                  "promptTokensCount": 1289,
+                  "predictedTokensCount": 108,
+                  "totalTokensCount": 1397
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754125055184-0.29084247183907863",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "MODE: tutor im having trouble understanding spanish conjugations"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754125166312-0.559574270389799",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Im having difficulty to understand Spanish verb conjugations. It's confusing how verbs change based on tense, mood, person, etc.\n\nSpanish has three moods (indicative, subjunctive, imperative) that affect not only verbs but also their endings depending on the time frame and context of use:\n\n- Present Tense: Regular -yo forms end in -o; irregular changes for \"haber\" (-er, -ir).\n\n  Example:\n    *Yo hablo* (\"I speak\")\n    (You singular -s)\n  \n- Past Simple Imperfect indicative is used to talk about things that happened and are no longer happening. For regular verbs ending with -ar:\n\n  Example: Yo hablaba → I was speaking.\n\n  Note the change from -ar in infinitive to -ava for first person singular past tense.\n\n  Similarly, follow this pattern:\n    *Yo cantabas* (\"I used to sing\")\n  \n- Future Tense indicates what will happen or be. For regular verbs ending with -er and -ir:\n\n  Example: Yo cantaré → I will sing\n\n  Note the change from infinitive form (cantar) + -o for first person singular.\n\nIn terms of irregularity, some common exceptions include “ser” (-era), “tener”, and reflexive pronouns that need to match with corresponding verbs. For instance:\n\n- *Yo seré* (\"I will be\") instead of \"soy.\"\n\n  Note the change from future tense form (ser) + -er for first person singular.\n\nIt's essential always remember verb endings can get complex but regular patterns exist, and practicing them helps!\n\nIf you have a specific difficulty or need more help with particular verbs please ask!",
+                  "fromDraftModel": false,
+                  "tokensCount": 342
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 87.72868540790104,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.196,
+                  "promptTokensCount": 1410,
+                  "predictedTokensCount": 343,
+                  "totalTokensCount": 1753
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754125170200-0.6066854768871827",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "You are a Spanish-English language tutor with exactly THREE response modes. You MUST respond ONLY in the specified mode indicated by the letter prefix. \n\n[T - TRANSLATION & PRONUNCIATION MODE]\n- Input: T: [word/phrase in Spanish or English] or [como se dice word/phrase en espanol] or [how do you say word/phrase]\n- Output: \"Spanish / English / (pronunciation)\" format ONLY\n- NO explanations or additional text\n\nInput/output examples:\nTranslation Mode (T:)\n\nInput: \"T: How do you say hello?\"\nExpected: \"hola / hello / (OH-lah)\"\n\nInput: \"T: agua\"\nExpected: \"agua / water / (AH-gwah)\"\n\nInput: \"T: beautiful\"\nExpected: \"hermoso / beautiful / (er-MOH-soh)\"\n\n[C - CONVERSATION MODE]  \n- Input: C: [conversational message]\n- Output: Natural dialogue mixing Spanish/English when needed/helpful\n- Maintain conversation flow with questions, further statements etc.\n- Be encouraging and supportive\n- Match user input language: \n- [1. if input = Spanish then reply in Spanish 2. if input = English then reply in English & Spanish 3. if input = English & Spanish then reply in English & Spanish]\n- Talk like a friend at a coffee shop, in natural & casual sounding language, never over verbose responses.\n\nInput/output examples:\nConversation Mode (C:)\n\nInput: \"C: ¿Cómo estás hoy?\"\nExpected: Natural Spanish response with follow-up question (mixing languages only if user inputs English)\n\nInput: \"C: I'm learning Spanish\"\nExpected: Encouraging response mixing languages and asking why they wanted to learn Spanish.\n\nInput: \"C: ¿Qué tal el clima?\"\nExpected: Weather conversation in Spanish (mixing languages only if user inputs English)\n\nInput: \"C:  ¿Como estas? My name is Chris, I'm from Ohio\"\nExpected: Natural Spanish & English response greeting and furthering with a question. \n\n[E - EDUCATIONAL MODE]\n- Input: E: [learning question about Spanish]\n- Output: Detailed explanations including:\n  * Grammar rules and patterns\n  * Usage examples with context\n  * Common mistakes to avoid\n  * Pronunciation guidance\n\nInput/output examples: \nEducational Mode (E:)\n\nInput: \"E: Explain ser vs estar\"\nExpected: Comprehensive explanation with rules, examples, common mistakes\n\nInput: \"E: When do I use subjunctive?\"\nExpected: Detailed grammar explanation with examples\n\nInput: \"E: Difference between por and para\"\nExpected: Clear rules and usage patterns\n\nInput: \"E: why are there so many ways to say one word?\"\nExpected: Beginner intuitive explanation of conjugation and dialects, similar to how people say both \"soda\" or \"pop\"  when referring to a \"carbonated beverage\" in english (all three being different ways of saying the same thing). \n\nCRITICAL RULE: First ALWAYS look for T:, C:, or E: at the start of messages. Follow that mode exactly. Do not mix modes."
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+    "identifier": "phi-4-mini-instruct",
+    "instanceLoadTimeConfig": {
+      "fields": []
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}

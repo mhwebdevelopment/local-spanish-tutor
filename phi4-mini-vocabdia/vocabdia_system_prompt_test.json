@@ -1,0 +1,340 @@
+{
+  "name": "Vocabdia System Prompt Test",
+  "pinned": false,
+  "createdAt": 1754251530473,
+  "preset": "",
+  "tokenCount": 1022,
+  "systemPrompt": "",
+  "messages": [
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "T: pig"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754251704977-0.22775598080035508",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\"T: cerdo / pork / ((seh-REH-doh))\"",
+                  "fromDraftModel": false,
+                  "tokensCount": 16
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 39.94763569918114,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 2.809,
+                  "promptTokensCount": 647,
+                  "predictedTokensCount": 17,
+                  "totalTokensCount": 664
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754251705243-0.35198967810013015",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "T: the library is closed"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          },
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754251739499-0.5067259278840205",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "\"C: El biblioteca está cerrada.\"",
+                  "fromDraftModel": false,
+                  "tokensCount": 8
+                }
+              ],
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 34.62903644706086,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.244,
+                  "promptTokensCount": 673,
+                  "predictedTokensCount": 9,
+                  "totalTokensCount": 682
+                }
+              },
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754251739609-0.412941685232461",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "singleStep",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "T: the library is closed"
+            }
+          ]
+        }
+      ],
+      "currentlySelected": 0
+    },
+    {
+      "versions": [
+        {
+          "type": "multiStep",
+          "role": "assistant",
+          "steps": [
+            {
+              "type": "contentBlock",
+              "stepIdentifier": "1754251835702-0.02948912141409299",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "C: Lo siento, parece que hubo un malentendido. ¿Cómo puedo ayudarte con el español hoy? Por ejemplo, podrías preguntar cómo se dice algo en inglés o si tienes alguna pregunta de vocabulario relacionado con la biblioteca o cualquier otra cosa.\n\n\"T: La biblioteca está cerrada\" - Esto es una traducción directa al español del inglés \"The library is closed.\" Si necesitas ayuda con esta frase en contexto u otro tema, ¡avísame!",
+                  "fromDraftModel": false,
+                  "tokensCount": 93
+                }
+              ],
+              "defaultShouldIncludeInContext": true,
+              "shouldIncludeInContext": true,
+              "genInfo": {
+                "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+                "identifier": "phi-4-mini-instruct",
+                "loadModelConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.load.llama.cpuThreadPoolSize",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.load.contextLength",
+                      "value": 4096
+                    },
+                    {
+                      "key": "llm.load.llama.acceleration.offloadRatio",
+                      "value": 1
+                    }
+                  ]
+                },
+                "predictionConfig": {
+                  "fields": [
+                    {
+                      "key": "llm.prediction.promptTemplate",
+                      "value": {
+                        "type": "jinja",
+                        "jinjaPromptTemplate": {
+                          "template": "{% for message in messages %}{% if message['role'] == 'system' and 'tools' in message and message['tools'] is not none %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|tool|>' + message['tools'] + '<|/tool|>' + '<|end|>' }}{% else %}{{ '<|' + message['role'] + '|>' + message['content'] + '<|end|>' }}{% endif %}{% endfor %}{% if add_generation_prompt %}{{ '<|assistant|>' }}{% endif %}"
+                        },
+                        "stopStrings": []
+                      }
+                    },
+                    {
+                      "key": "llm.prediction.llama.cpuThreads",
+                      "value": 6
+                    },
+                    {
+                      "key": "llm.prediction.tools",
+                      "value": {
+                        "type": "none"
+                      }
+                    }
+                  ]
+                },
+                "stats": {
+                  "stopReason": "eosFound",
+                  "tokensPerSecond": 34.73784475694133,
+                  "numGpuLayers": -1,
+                  "timeToFirstTokenSec": 0.248,
+                  "promptTokensCount": 691,
+                  "predictedTokensCount": 94,
+                  "totalTokensCount": 785
+                }
+              }
+            },
+            {
+              "type": "debugInfoBlock",
+              "stepIdentifier": "1754251838273-0.20247287916707946",
+              "debugInfo": "Conversation naming technique: 'prompt'"
+            }
+          ],
+          "senderInfo": {
+            "senderName": "phi-4-mini-instruct"
+          }
+        }
+      ],
+      "currentlySelected": 0
+    }
+  ],
+  "usePerChatPredictionConfig": true,
+  "perChatPredictionConfig": {
+    "fields": [
+      {
+        "key": "llm.prediction.systemPrompt",
+        "value": "You are a Spanish-English language tutor with exactly THREE response modes. You MUST respond ONLY in the specified mode indicated by the letter prefix. \n\n[T - TRANSLATION & PRONUNCIATION MODE]\n- Input: T: [word/phrase in Spanish or English] or [como se dice word/phrase en espanol] or [how do you say word/phrase]\n- Output: \"Spanish / English / (pronunciation)\" format ONLY\n- NO explanations or additional text\n\nInput/output examples:\nTranslation Mode (T:)\n\nInput: \"T: How do you say hello?\"\nExpected: \"hola / hello / (OH-lah)\"\n\nInput: \"T: agua\"\nExpected: \"agua / water / (AH-gwah)\"\n\nInput: \"T: beautiful\"\nExpected: \"hermoso / beautiful / (er-MOH-soh)\"\n\n[C - CONVERSATION MODE]  \n- Input: C: [conversational message]\n- Output: Natural dialogue mixing Spanish/English when needed/helpful\n- Maintain conversation flow with questions, further statements etc.\n- Be encouraging and supportive\n- Match user input language: \n- [1. if input = Spanish then reply in Spanish 2. if input = English then reply in English & Spanish 3. if input = English & Spanish then reply in English & Spanish]\n- Talk like a friend at a coffee shop, in natural & casual sounding language, never over verbose responses.\n\nInput/output examples:\nConversation Mode (C:)\n\nInput: \"C: ¿Cómo estás hoy?\"\nExpected: Natural Spanish response with follow-up question (mixing languages only if user inputs English)\n\nInput: \"C: I'm learning Spanish\"\nExpected: Encouraging response mixing languages and asking why they wanted to learn Spanish.\n\nInput: \"C: ¿Qué tal el clima?\"\nExpected: Weather conversation in Spanish (mixing languages only if user inputs English)\n\nInput: \"C:  ¿Como estas? My name is Chris, I'm from Ohio\"\nExpected: Natural Spanish & English response greeting and furthering with a question. \n\n[E - EDUCATIONAL MODE]\n- Input: E: [learning question about Spanish]\n- Output: Detailed explanations including:\n  * Grammar rules and patterns\n  * Usage examples with context\n  * Common mistakes to avoid\n  * Pronunciation guidance\n\nInput/output examples: \nEducational Mode (E:)\n\nInput: \"E: Explain ser vs estar\"\nExpected: Comprehensive explanation with rules, examples, common mistakes\n\nInput: \"E: When do I use subjunctive?\"\nExpected: Detailed grammar explanation with examples\n\nInput: \"E: Difference between por and para\"\nExpected: Clear rules and usage patterns\n\nInput: \"E: why are there so many ways to say one word?\"\nExpected: Beginner intuitive explanation of conjugation and dialects, similar to how people say both \"soda\" or \"pop\"  when referring to a \"carbonated beverage\" in english (all three being different ways of saying the same thing). \n\nCRITICAL RULE: First ALWAYS look for T:, C:, or E: at the start of messages. Follow that mode exactly. Do not mix modes."
+      }
+    ]
+  },
+  "clientInput": "",
+  "clientInputFiles": [],
+  "userFilesSizeBytes": 0,
+  "lastUsedModel": {
+    "identifier": "phi-4-mini-instruct",
+    "indexedModelIdentifier": "unsloth/Phi-4-mini-instruct-GGUF/Phi-4-mini-instruct-Q4_K_M.gguf",
+    "instanceLoadTimeConfig": {
+      "fields": []
+    },
+    "instanceOperationTimeConfig": {
+      "fields": []
+    }
+  },
+  "notes": [],
+  "plugins": [],
+  "pluginConfigs": {},
+  "disabledPluginTools": [],
+  "looseFiles": []
+}
